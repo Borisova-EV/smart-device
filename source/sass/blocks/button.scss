@@ -9,4 +9,16 @@
   color: $white;
   border: 1px solid $white;
   border-radius: 5px;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
