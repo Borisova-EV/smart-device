@@ -11,8 +11,38 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-
+<body class="page-body">
+  <header class="page-header">
+    <div class="page-header__link">
+      <a href="#" class="page-header__logo" aria-label="Перейти на главную страницу Smart Device">
+        <svg class="page-header__logo-image" width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#brain-logo"></use>
+        </svg>
+        <svg class="page-header__logo-title" width="134" height="45" viewBox="0 0 134 45" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite_auto.svg#title-logo"></use>
+        </svg>
+      </a>
+      <ul class="page-header__contacts contacts-link">
+        <li class="contacts-link__item contacts-link__item--mail">
+          <a href="mailto:info@sd.ru" aria-label="Отправить письмо по электронному адресу info@sd.ru">
+            <svg width="19" height="14" viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#mail"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+        </li>
+        <li class="contacts-link__item contacts-link__item--telephone">
+          <a href="tel:+74950005252" aria-label="Позвонить по номеру +7 (495) 000 52 52">
+            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#telephone"></use>
+            </svg>
+            <span>+7 (495) 000 52 52</span>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="page-header__order-call button">Заказать звонок</a>
+    </div>
+  </header>
 </body>
 
 </html>

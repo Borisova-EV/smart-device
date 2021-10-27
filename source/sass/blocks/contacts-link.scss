@@ -1,0 +1,58 @@
+.contacts-link {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.contacts-link__item {
+  font-family: "PT Mono", "Nimbus Mono L", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+
+  &:not(:last-child) {
+    margin-right: 88px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    cursor: pointer;
+
+    svg {
+      stroke: $blue;
+    }
+
+    &:visited {
+      color:inherit;
+    }
+
+    &:hover {
+      color: $blue;
+
+      svg {
+        stroke: $white;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &--mail {
+    svg {
+      width: 19px;
+      height: 14px;
+      margin-right: 20px;
+    }
+  }
+
+  &--telephone {
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 16px;
+    }
+  }
+}

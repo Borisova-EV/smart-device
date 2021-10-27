@@ -1,0 +1,37 @@
+.page-header {
+  padding-top: 33px;
+  background-color: $dark;
+}
+
+.page-header__logo {
+  margin-right: 30px;
+}
+
+.page-header__logo-image {
+  width: 52px;
+  height: 52px;
+  margin-right: 10px;
+}
+
+.page-header__logo-title {
+  width: 134px;
+  height: 45px;
+}
+
+.page-header__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1470px;
+  margin: 0 auto;
+}
+
+.page-header__contacts {
+  flex-grow: 1;
+  margin-top: 0;
+  margin-right: 50px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
