@@ -1,0 +1,45 @@
+.navigation {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  font-size: 15px;
+  line-height: 25px;
+  list-style: none;
+  column-gap: 16%;
+
+  @media (max-width: $min-desktop-width) {
+    column-gap: 5%;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    opacity: 0.5;
+
+    &:visited {
+      color:inherit
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+}
+
+.navigation__column-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  min-width: max-content;
+}

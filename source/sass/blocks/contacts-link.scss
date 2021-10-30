@@ -61,28 +61,29 @@
 
   &--mail {
     svg {
+      margin-right: 20px;
       width: 19px;
       height: 14px;
-      margin-right: 20px;
 
       @media (max-width: $tablet-max-width) {
+        margin-right: 0;
         width: 25px;
         height: 19px;
-        margin-right: 0;
       }
     }
   }
 
   &--telephone {
     svg {
+      margin-right: 16px;
       width: 18px;
       height: 18px;
-      margin-right: 16px;
 
       @media (max-width: $tablet-max-width) {
+        margin-right: 0;
         width: 24px;
         height: 24px;
-        margin-right: 0;
+
       }
     }
   }

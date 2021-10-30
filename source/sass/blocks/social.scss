@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+
+  a {
+    display: block;
+    fill: $light-grey;
+
+    &:visited {
+      fill:  $light-grey;
+    }
+
+    &:hover {
+      fill: $blue;
+    }
+
+    &:active {
+      fill: $light-grey;
+      opacity: 0.5;
+    }
+  }
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}

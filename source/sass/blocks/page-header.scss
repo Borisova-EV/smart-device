@@ -16,9 +16,10 @@
 }
 
 .page-header__logo-image {
+  margin-right: 10px;
   width: 52px;
   height: 52px;
-  margin-right: 10px;
+
 
   @media (max-width: $mobile-max-width) {
     width: 38px;
@@ -39,10 +40,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
   max-width: 1470px;
-  margin: 0 auto;
+
 
   @media (max-width: $tablet-max-width) {
     padding-left: 25px;
@@ -56,11 +58,11 @@
 }
 
 .page-header__contacts {
-  flex-grow: 1;
   margin-top: 0;
   margin-right: 50px;
   margin-bottom: 0;
   padding-left: 0;
+  flex-grow: 1;
 
   @media (max-width: $tablet-max-width) {
     margin-right: 0;
