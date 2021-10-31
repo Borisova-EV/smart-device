@@ -1,6 +1,15 @@
 .page-header {
   padding-top: 33px;
-  background-color: $dark;
+  background-image: url("../img/others/head-waves.png"),
+  linear-gradient($dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/others/head-waves@2x.png"),
+    linear-gradient($dark);
+  }
 
   @media (max-width: $tablet-max-width) {
       padding-top: 20px;
@@ -40,7 +49,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 225px;
   padding-left: 30px;
   padding-right: 30px;
   max-width: 1470px;
@@ -49,11 +58,13 @@
   @media (max-width: $tablet-max-width) {
     padding-left: 25px;
     padding-right: 25px;
+    margin-bottom: 116px;
   }
 
   @media (max-width: $mobile-max-width) {
     padding-left: 17px;
     padding-right: 17px;
+    margin-bottom: 228px;
   }
 }
 
@@ -72,5 +83,25 @@
 .page-header__order-call {
   @media (max-width: $tablet-max-width) {
     display: none;
+  }
+}
+
+.page-header__section {
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 278px;
+  max-width: 1470px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 163px;
+    padding-left: 86px;
+    padding-right: 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 70px;
   }
 }

@@ -1,0 +1,175 @@
+.head {
+  position: relative;
+  color: $white;
+
+  @media (max-width: $tablet-max-width) {
+    position: static;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -3%;
+    width: 48%;
+    height: 515px;
+    background-image: url("../img/head/circuit-boards.png"),
+    url("../img/triangles/double-ellipse-white.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, 85% 70%;
+    background-size: contain, 273% 881px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/head/circuit-boards@2x.png"),
+      url("../img/triangles/double-ellipse-white.svg");
+    }
+
+    @media (max-width: $tablet-max-width) {
+      top: 8%;
+      right: -13%;
+      width: 60.5%;
+      background-image: url("../img/head/circuit-boards-tablet.png"),
+      url("../img/triangles/double-ellipse-white-tablet.svg");
+      background-position: center, 133% 61%;
+      background-size: 57%, 165% 563px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/head/circuit-boards-tablet@2x.png"),
+        url("../img/triangles/double-ellipse-white-tablet.svg");
+      }
+    }
+
+    @media (max-width: $mobile-max-width) {
+      top: 8%;
+      right: 0;
+      width: 304px;
+      background-image: url("../img/head/circuit-boards-mobile.png"),
+      url("../img/triangles/double-ellipse-white-mobile.svg");
+      background-position: 0 58px, 55% -31px;
+      background-size: 100%, 165% 529px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/head/circuit-boards-mobile@2x.png"),
+        url("../img/triangles/double-ellipse-white-mobile.svg");
+      }
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 29px;
+    width: 51%;
+    font-family: "Roboto Condensed","Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 25px;
+      font-size: 60px;
+      line-height: 70px
+    }
+
+    @media (max-width: $mobile-max-width) {
+      position: relative;
+      margin-bottom: 27px;
+      width: 100%;
+      font-size: 40px;
+      line-height: 47px;
+      z-index: 10;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 43px;
+    width: 50%;
+    font-family: "PT Mono", "Nimbus Mono L", "Courier New", monospace;
+    font-size: 22px;
+    line-height: 34px;
+
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 54px;
+      width: 56%;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 39px;
+      padding-left: 48px;
+      width: 269px;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 66px;
+      height: 2px;
+      background-color: $white;
+
+      @media (max-width: $tablet-max-width) {
+        width: 33px;
+      }
+    }
+  }
+}
+
+.head__content {
+  position: relative;
+  padding-left: 100px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 53px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 0;
+  }
+}
+
+.head__link {
+  display: block;
+  padding-top: 17px;
+  width: 407px;
+  height: 55px;
+  font-family: "Roboto Condensed","Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 379px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+}
+
+.head__link-desktop {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.head__link-mobile {
+  display: none;
+
+  @media (max-width: $mobile-max-width) {
+    display: inline;
+  }
+}

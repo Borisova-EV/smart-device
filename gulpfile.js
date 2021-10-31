@@ -15,14 +15,12 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
-var gcmq = require('gulp-group-css-media-queries');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(gcmq())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
