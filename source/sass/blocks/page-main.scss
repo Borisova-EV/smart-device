@@ -1,0 +1,16 @@
+.page-main__features {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1470px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

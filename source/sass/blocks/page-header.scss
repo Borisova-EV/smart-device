@@ -1,4 +1,5 @@
 .page-header {
+  margin-bottom: 109px;
   padding-top: 33px;
   background-image: url("../img/others/head-waves.png"),
   linear-gradient($dark);
@@ -12,10 +13,12 @@
   }
 
   @media (max-width: $tablet-max-width) {
-      padding-top: 20px;
+    margin-bottom: 54px;
+    padding-top: 20px;
   }
 
   @media (max-width: $mobile-max-width) {
+    margin-bottom: 37px;
     padding-top: 17px;
   }
 }

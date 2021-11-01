@@ -6,9 +6,20 @@ $grey: #666666;
 $light-grey: #999999;
 $special-grey: #cdcdcd;
 $border-grey: rgb(98, 105, 98);
+$border-light-grey: #ebebeb;
 
 // Viewport
 $tablet-max-width: 1023px;
 $mobile-max-width: 767px;
 $desktop-min-width: 1024px;
 $min-desktop-width: 1100px;
+
+//mixin
+
+@mixin mono-font {
+  font-family: "PT Mono", "Nimbus Mono L", "Courier New", monospace;
+};
+
+@mixin roboto-font {
+  font-family: "Roboto Condensed","Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+};

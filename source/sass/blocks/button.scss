@@ -1,7 +1,7 @@
 .button {
   padding: 14px 28px;
   min-width: max-content;
-  font-family: "Roboto Condensed","Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  @include roboto-font;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;

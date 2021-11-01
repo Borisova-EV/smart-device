@@ -1,11 +1,11 @@
 .page-footer {
-  font-family: "PT Mono", "Nimbus Mono L", "Courier New", monospace;
+  @include mono-font;
   color: $dark;
 
   h2 {
     margin-top: 0;
     margin-bottom: 26px;
-    font-family: "Roboto Condensed","Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+    @include roboto-font;
     font-size: 15px;
     line-height: 16px;
     letter-spacing: 0.05em;
