@@ -1,4 +1,5 @@
 .button {
+  display: block;
   padding: 14px 28px;
   min-width: max-content;
   @include roboto-font;
@@ -7,6 +8,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $white;
+  text-align: center;
   border: 1px solid $white;
   border-radius: 5px;
 
@@ -20,5 +22,19 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  &--blue {
+    color: $blue;
+    border-color: $blue;
+
+    &:visited {
+      color: $blue;
+    }
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
   }
 }

@@ -1,10 +1,11 @@
-.page-main__features {
-  margin: 0 auto;
+.page-main__section {
+  margin: 0 auto 105px;
   padding-left: 30px;
   padding-right: 30px;
   max-width: 1470px;
 
   @media (max-width: $tablet-max-width) {
+    margin-bottom: 55px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -13,4 +14,19 @@
     padding-left: 14px;
     padding-right: 14px;
   }
+
+  &--about {
+    padding-left: 190px;
+
+    @media (max-width: $tablet-max-width) {
+      padding-left: 195px;
+      padding-right: 0;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
 }
+
