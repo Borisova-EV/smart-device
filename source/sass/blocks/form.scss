@@ -1,0 +1,130 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 40px;
+  max-width: 100%;
+
+  @media (max-width: $tablet-max-width) {
+    column-gap: 32px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+
+  input, textarea {
+    padding: 14px 16px;
+    width: 100%;
+    @include mono-font;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba($white-rgb, 0.1);
+    border-style: none;
+
+    @media (max-width: $tablet-max-width) {
+      padding-left: 19px;
+      padding-right: 19px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 31px;
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+    }
+  }
+
+  input {
+    height: 50px;
+
+    @media (max-width: $tablet-max-width) {
+      height: 51px;
+    }
+  }
+
+  textarea {
+    grid-column: 1/-1;
+    height: 154px;
+
+    @media (max-width: $tablet-max-width) {
+      height: 162px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 26px;
+      height: 106px;
+    }
+  }
+
+  .form__checkbox {
+    appearance: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 16px;
+    padding: 0;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+
+    @media (max-width: $mobile-max-width) {
+      max-width: 16px;
+    }
+  }
+}
+
+.form__button {
+  margin-top: 5px;
+  height: 45px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 0;
+    margin-bottom: 31px;
+    width: 100%;
+  }
+}
+
+.form__checkbox-block {
+  display: flex;
+  padding-top: 12px;
+  padding-left: 8px;
+  @include mono-font;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0;
+  }
+}
+
+.form__checkbox:checked + label {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -29px;
+      width: 9px;
+      height: 6px;
+      background-image: url("../img/icon/checkbox.svg");
+      background-repeat: no-repeat;
+    }
+
+  .form__checkbox + label {
+    &::before {
+      display: none;
+    }
+  }
+}

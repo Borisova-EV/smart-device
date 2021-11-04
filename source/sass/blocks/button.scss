@@ -37,4 +37,16 @@
       color: $white;
     }
   }
+
+  &--opacity-white {
+    background-color: rgba($white-rgb, 0.1);
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      border-color: $dark;
+    }
+  }
 }

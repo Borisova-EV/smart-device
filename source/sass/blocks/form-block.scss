@@ -1,0 +1,108 @@
+.form-block {
+  position: relative;
+  padding-top: 91px;
+  min-height: 670px;
+  color: $white;
+  background-color: $blue;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 81px;
+    min-height: 664px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 30px;
+    min-height: 640px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 9%;
+    top: 13.4%;
+    width: 35.3%;
+    height: 73.3%;
+    background-image: url("../img/others/airplane.png"), url("../img/triangles/double-ellipse-white.png");
+    background-repeat: no-repeat;
+    background-size: 74%, 100%;
+    background-position: 100% 37%, bottom;
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include roboto-font;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 15px;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 13px;
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 49px;
+    @include mono-font;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 54px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.form-block__container {
+  position: relative;
+  padding-left: 15px;
+  width: 50%;
+
+  @media (max-width: $tablet-max-width) {
+    padding-left: 0;
+    width: 82%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+
+  &::before {
+    @include single-white-triangles (31%, 234px);
+    right: -47%;
+    top: 0;
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include single-white-triangles (48.2%, 288px);
+    background-size: cover;
+    transform: rotate(300deg);
+    bottom: -71px;
+    right: -63%;
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
+}

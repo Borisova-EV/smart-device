@@ -1,17 +1,41 @@
 .features {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 41%);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   row-gap: 30px;
   justify-content: center;
   list-style: none;
-
-  @media (max-width: $tablet-max-width) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  background-color: transparent;
 
   @media (max-width: $mobile-max-width) {
     display: block;
+  }
+
+  &::before {
+    @include single-ellipse-triangles;
+    top: 32%;
+    left: 39%;
+
+    @media (max-width: $tablet-max-width) {
+      top: 34%;
+      left: 64%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include single-ellipse-triangles;
+    bottom: -416px;
+    left: -704px;
+    transform: rotate(180deg);
+
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
   }
 
   h3 {
@@ -46,6 +70,7 @@
 .features__item {
   padding: 40px 51px 10px;
   min-height: 299px;
+  background-color: $white;
   border: 1px solid $border-light-grey;
   border-left: 3px solid $blue;
 
@@ -63,6 +88,35 @@
   &:not(:last-child) {
     @media (max-width: $mobile-max-width) {
       margin-bottom: 20px;
+    }
+  }
+
+  &:first-child {
+    position: relative;
+
+    &::before {
+      @include single-grey-triangles;
+      left: -173px;
+      top: -68px;
+
+      @media (max-width: $tablet-max-width) {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    position: relative;
+
+    &::before {
+      @include single-grey-triangles;
+      right: -347px;
+      bottom: 17px;
+      transform: rotate(180deg);
+
+      @media (max-width: $tablet-max-width) {
+        display: none;
+      }
     }
   }
 
@@ -158,7 +212,6 @@
 
   &:hover {
     background-color: $blue;
-    border-style: none;
 
     h3, p {
     color: $white;

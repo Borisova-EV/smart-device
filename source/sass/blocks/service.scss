@@ -1,0 +1,208 @@
+.service {
+  padding-top: 93px;
+  min-height: 942px;
+  @include roboto-font;
+  color: $white;
+  background-color: $dark;
+
+  @media (max-width: $tablet-max-width) {
+    min-height: auto;
+    padding-top: 53px;
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 11px;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 46px;
+      width: 85%;
+      font-size: 32px;
+      line-height: 45px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 37px;
+      padding-left: 12px;
+      width: 100%;
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50%;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+
+    @media (max-width: $tablet-max-width) {
+      width: 25%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 61%;
+    }
+  }
+
+  a {
+    display: block;
+    padding-top: 50px;
+    padding-left: 44px;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: $tablet-max-width) {
+      padding-top: 43px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-top: 23px;
+      padding-left: 37px;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover {
+      box-shadow: 10px 5px 40px $blue;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  column-gap: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+}
+
+.service__item {
+  position: relative;
+  max-width: 370px;
+  height: 620px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    max-width: 100%;
+    height: 256px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 45px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--production {
+    background-image: url("../img/service/production.png"), linear-gradient($dark);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service/production@2x.png"), linear-gradient($dark);
+    }
+
+    @media (max-width: $tablet-max-width) {
+      background-image: url("../img/service/production-tablet.png"), linear-gradient($dark);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/service/production-tablet@2x.png"), linear-gradient($dark);
+      }
+    }
+
+    @media (max-width: $mobile-max-width) {
+      background-image: url("../img/service/production-mobile.png"), linear-gradient($dark);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/service/production-mobile@2x.png"), linear-gradient($dark);
+      }
+    }
+  }
+
+  &--assembly {
+    background-image: url("../img/service/assembly.png"),
+    linear-gradient($dark);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service/assembly@2x.png"), linear-gradient($dark);
+    }
+
+    @media (max-width: $tablet-max-width) {
+      background-image: url("../img/service/assembly-tablet.png"), linear-gradient($dark);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/service/assembly-tablet@2x.png"), linear-gradient($dark);
+      }
+    }
+
+    @media (max-width: $mobile-max-width) {
+      background-image: url("../img/service/assembly-mobile.png"), linear-gradient($dark);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/service/assembly-mobile@2x.png"), linear-gradient($dark);
+      }
+    }
+  }
+
+  &--component {
+    background-image: url("../img/service/components.png"),
+    linear-gradient($dark);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/service/components@2x.png"), linear-gradient($dark);
+    }
+
+    @media (max-width: $tablet-max-width) {
+      background-image: url("../img/service/components-tablet.png"), linear-gradient($dark);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/service/components-tablet@2x.png"), linear-gradient($dark);
+      }
+    }
+
+    @media (max-width: $mobile-max-width) {
+      background-image: url("../img/service/components-mobile.png"), linear-gradient($dark);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/service/components-mobile@2x.png"), linear-gradient($dark);
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 63px;
+    height: 63px;
+    background-image: url("../img/icon/arrow.svg"), linear-gradient($blue);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

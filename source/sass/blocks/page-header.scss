@@ -1,11 +1,12 @@
 .page-header {
-  margin-bottom: 109px;
+  position: relative;
+  margin-bottom: 37px;
   padding-top: 33px;
   background-image: url("../img/others/head-waves.png"),
   linear-gradient($dark);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: hidden;
+  overflow: hidden;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/others/head-waves@2x.png"),

@@ -1,6 +1,5 @@
 .about {
- position: relative;
-  width: 62%;
+  position: relative;
   color: $grey;
 
   @media (max-width: $tablet-max-width) {
@@ -15,7 +14,7 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: -19px;
+    left: 0;
     width: 220px;
     height: 317px;
     background-image: url("../img/others/2005.png");
