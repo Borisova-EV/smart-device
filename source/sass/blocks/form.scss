@@ -19,6 +19,7 @@
     @include mono-font;
     font-size: 16px;
     line-height: 22px;
+    color: $white;
     background-color: rgba($white-rgb, 0.1);
     border-style: none;
 
@@ -30,6 +31,16 @@
     @media (max-width: $mobile-max-width) {
       margin-bottom: 31px;
       width: 100%;
+    }
+
+    &:hover {
+      background-color: rgba($white-rgb, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: rgba($white-rgb, 0.1);
+      border: 1px solid $white;
     }
 
     &::placeholder {
@@ -82,6 +93,10 @@
     @media (max-width: $mobile-max-width) {
       max-width: 16px;
     }
+
+    &:focus {
+      outline: 1px solid $white;
+    }
   }
 }
 
@@ -93,6 +108,10 @@
     margin-top: 0;
     margin-bottom: 31px;
     width: 100%;
+  }
+
+  &:focus {
+    outline: 1px solid $white;
   }
 }
 

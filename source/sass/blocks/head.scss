@@ -11,18 +11,17 @@
     content: "";
     position: absolute;
     top: -10%;
-    right: -3%;
+    right: -2%;
     width: 48%;
-    height: 515px;
-    background-image: url("../img/head/circuit-boards.png"),
-    url("../img/triangles/double-ellipse-white.svg");
+    height: 503px;
+    background-image: url("../img/head/circuit-boards.png"), url("../img/triangles/double-ellipse-white.png");
     background-repeat: no-repeat, no-repeat;
-    background-position: center, 85% 70%;
-    background-size: contain, 273% 881px;
+    background-position: 163% 26%, bottom;
+    background-size: 98%, 96%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/head/circuit-boards@2x.png"),
-      url("../img/triangles/double-ellipse-white.svg");
+      url("../img/triangles/double-ellipse-white.png");
     }
 
     @media (max-width: $tablet-max-width) {
@@ -30,13 +29,13 @@
       right: -13%;
       width: 60.5%;
       background-image: url("../img/head/circuit-boards-tablet.png"),
-      url("../img/triangles/double-ellipse-white-tablet.svg");
-      background-position: center, 133% 61%;
+      url("../img/triangles/double-ellipse-white-tablet.png");
+      background-position: center, 133% 89%;
       background-size: 57%, 165% 563px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/head/circuit-boards-tablet@2x.png"),
-        url("../img/triangles/double-ellipse-white-tablet.svg");
+        url("../img/triangles/double-ellipse-white-tablet.png");
       }
     }
 
@@ -45,13 +44,13 @@
       right: 0;
       width: 304px;
       background-image: url("../img/head/circuit-boards-mobile.png"),
-      url("../img/triangles/double-ellipse-white-mobile.svg");
-      background-position: 0 58px, 55% -31px;
-      background-size: 100%, 165% 529px;
+      url("../img/triangles/double-ellipse-white-mobile.png");
+      background-position: 0 14%, 0 -49px;
+      background-size: 100%, 304px 529px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/head/circuit-boards-mobile@2x.png"),
-        url("../img/triangles/double-ellipse-white-mobile.svg");
+        url("../img/triangles/double-ellipse-white-mobile.png");
       }
     }
   }
@@ -157,6 +156,15 @@
 
   @media (max-width: $mobile-max-width) {
     width: 100%;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $white;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

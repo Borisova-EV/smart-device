@@ -15,17 +15,22 @@ function closeAccordionContent() {
 
 }
 
+function changeButtonAccordion (currentButton) {
+  accordionButtons.forEach(function (button) {
+    if (button !== currentButton) {
+      button.classList.remove('page-footer__accordion-button--current');
+    }
+  })
+}
+
 function openAccordionMenu() {
   closeAccordionContent();
   accordionButtons.forEach(function (button) {
     button.addEventListener('click', function (evt) {
       const buttonCurrent = evt.target;
+      changeButtonAccordion (buttonCurrent);
       console.log(evt.target);
       buttonCurrent.classList.toggle('page-footer__accordion-button--current');
-      if (button !== buttonCurrent) {
-        button.classList.remove('page-footer__accordion-button--current');
-        console.log(3);
-      }
       const content = buttonCurrent.nextElementSibling;
       accordionContents.forEach(function (elem) {
         console.log(4);
