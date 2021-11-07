@@ -1,12 +1,14 @@
 const accordionButtons = document.querySelectorAll('.page-footer__accordion-button');
 const accordionContents = document.querySelectorAll('.page-footer__accordion-content');
+
 const sliceText = document.querySelector('.about__slice-text');
 const text = sliceText.textContent;
+
 const form = document.querySelector('.form');
-const inputRequired = document.querySelectorAll('input[required]');
-const inputName = document.querySelector('input#name');
-const inputTelephone = document.querySelector('input#telephone');
-const inputMessage = document.querySelector('textarea');
+//const inputName = document.querySelector('input#name');
+
+const inputTelephone = form.querySelector('input[type=tel]');
+//const inputMessage = document.querySelector('textarea');
 
 let smallDevice = window.matchMedia("(max-width: 1023px)");
 let isStorageSupport = true;
@@ -91,18 +93,22 @@ try {
   isStorageSupport = false;
 }
 
-
-function isRequiredInputEmpty() {
+function isRequiredInputEmpty(form) {
+  const inputRequired = form.querySelectorAll('input[required]');
   inputRequired.forEach(function (input) {
-    input.value === 0
+    return input === 0;
   })
 }
 
-function submitForm() {
+function submitForm(form) {
   form.addEventListener('submit', function (evt) {
-    if (isRequiredInputEmpty) {
+    const inputName = form.querySelector('input[type=text]');
+    const inputTelephone = form.querySelector('input[type=tel]');
+    const inputMessage = form.querySelector('textarea');
+    if (isRequiredInputEmpty(form)) {
       evt.preventDefault();
     } else if (isStorageSupport) {
+      console.log(5)
       localStorage.setItem('name', inputName.value);
       localStorage.setItem('telephone', inputTelephone.value);
       localStorage.setItem('message', inputMessage.value);
@@ -110,27 +116,94 @@ function submitForm() {
   })
 }
 
-submitForm();
+/*function isRequiredInputEmpty() {
+  inputTelephone.value === 0 || inputName.value === 0
+}
 
-inputTelephone.addEventListener('focus', function () {
-  inputTelephone.value = FIRST_SYMBOL;
-})
 
-function createTelephoneMask() {
-  inputTelephone.addEventListener('input', function (evt) {
-    if (inputTelephone.value == 0) {
-      inputTelephone.value = FIRST_SYMBOL + inputTelephone.value;
+
+function submitForm() {
+  form.addEventListener('submit', function (evt) {
+    if (isRequiredInputEmpty()) {
+      evt.preventDefault();
+    } else if (isStorageSupport) {
+      console.log(5)
+      localStorage.setItem('name', inputName.value);
+      localStorage.setItem('telephone', inputTelephone.value);
+      localStorage.setItem('message', inputMessage.value);
+    }
+  })
+}*/
+
+submitForm(form);
+
+function createTelephoneMask(telephone) {
+  telephone.addEventListener('focus', function () {
+    telephone.value = FIRST_SYMBOL;
+  })
+  telephone.addEventListener('input', function (evt) {
+    if (telephone.value == 0) {
+      telephone.value = FIRST_SYMBOL + telephone.value;
     } else {
       if (/[0-9]/.test(evt.data)) {
-        if (inputTelephone.value.length >= (POSITION_PARENTHESIS_MASK - 1) && inputTelephone.value.length < POSITION_PARENTHESIS_MASK) {
-          inputTelephone.value += ')';
+        if (telephone.value.length >= (POSITION_PARENTHESIS_MASK - 1) && telephone.value.length < POSITION_PARENTHESIS_MASK) {
+          telephone.value += ')';
         }
       } else {
         const position = evt.target.selectionStart;
-        inputTelephone.value = inputTelephone.value.substring(0, position - 1);
+        telephone.value = telephone.value.substring(0, position - 1);
       }
     }
   })
 }
 
-createTelephoneMask();
+createTelephoneMask(inputTelephone);
+
+const orderCallButton = document.querySelector('.page-header__order-call');
+const orderCallTemplate = document.querySelector('#order-call').content.querySelector('.modal');
+const orderCallModal = orderCallTemplate.cloneNode(true);
+const closeOrderCallModalButton = orderCallModal.querySelector('.modal__button');
+const inputNameModal = orderCallModal.querySelector('input#name');
+
+function closeOrderCallModal() {
+  document.body.removeChild(orderCallModal);
+  document.body.classList.remove('page-body--opened-modal');
+  document.removeEventListener('keydown', onDocumentKeydown);
+  document.removeEventListener('click', onDocumentClick);
+  closeOrderCallModalButton.removeEventListener('click', onCloseOrderCallModalButtonClick);
+}
+
+const onDocumentKeydown = function (evt) {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
+    evt.preventDefault();
+    closeOrderCallModal();
+  }
+};
+
+const onDocumentClick = function (evt) {
+  if (evt.target !== orderCallModal && evt.target !== orderCallButton && !orderCallModal.contains(evt.target)) {
+    closeOrderCallModal();
+  }
+};
+
+const onCloseOrderCallModalButtonClick = function () {
+  closeOrderCallModal();
+}
+
+function openOrderCallModal() {
+  orderCallButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    document.body.prepend(orderCallModal);
+    inputNameModal.focus();
+    const formOrderCall = orderCallModal.querySelector('.form');
+    const telephoneOrderCall = formOrderCall.querySelector('input[type=tel]');
+    createTelephoneMask(telephoneOrderCall);
+    submitForm(formOrderCall);
+    document.body.classList.add('page-body--opened-modal');
+    document.addEventListener('keydown', onDocumentKeydown);
+    document.addEventListener('click', onDocumentClick);
+    closeOrderCallModalButton.addEventListener('click', onCloseOrderCallModalButtonClick);
+  })
+}
+
+openOrderCallModal();

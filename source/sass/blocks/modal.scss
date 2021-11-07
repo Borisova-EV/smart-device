@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 29px;
+  padding-left: 39px;
+  padding-right: 39px;
+  width: 490px;
+  height: 605px;
+  color: $white;
+  background-color: $blue;
+  z-index: 10;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include roboto-font;
+    font-size: 28px;
+    line-height: 39px;
+    font-weight: normal;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 35px;
+    width: 90%;
+    @include mono-font;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.modal__button {
+ position: absolute;
+ top: 20px;
+ right: 20px;
+ width: 17px;
+ height: 17px;
+ background-color: transparent;
+ background-image: url("../img/icon/close.svg");
+ background-repeat: no-repeat;
+ border-style: none;
+}
