@@ -5,6 +5,7 @@
   min-height: 100%;
 
   &--opened-modal {
+    overflow: hidden;
     &::before {
       content: "";
       position: absolute;

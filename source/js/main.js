@@ -11,7 +11,9 @@ const orderCallButton = document.querySelector('.page-header__order-call');
 const orderCallTemplate = document.querySelector('#order-call').content.querySelector('.modal');
 const orderCallModal = orderCallTemplate.cloneNode(true);
 const closeOrderCallModalButton = orderCallModal.querySelector('.modal__button');
-const inputNameModal = orderCallModal.querySelector('input#name');
+const inputNameModal = orderCallModal.querySelector('input#name-order-call');
+
+const anchors = document.querySelectorAll('.anchor-link');
 
 let smallDevice = window.matchMedia("(max-width: 1023px)");
 let isStorageSupport = true;
@@ -132,6 +134,7 @@ function createTelephoneMask(telephone) {
       telephone.value = FIRST_SYMBOL + telephone.value;
     } else {
       if (/[0-9]/.test(evt.data)) {
+        telephone.setCustomValidity('');
         if (telephone.value.length >= (POSITION_SYMBOL_MASK - 1) && telephone.value.length < POSITION_SYMBOL_MASK) {
           telephone.value += SYMBOL_MASK;
         }
@@ -183,7 +186,7 @@ function openOrderCallModal() {
     const telephoneOrderCall = formOrderCall.querySelector('input[type=tel]');
     createTelephoneMask(telephoneOrderCall);
     submitForm(formOrderCall);
-    
+
     document.body.classList.add('page-body--opened-modal');
     document.addEventListener('keydown', onDocumentKeydown);
     document.addEventListener('click', onDocumentClick);
@@ -192,3 +195,20 @@ function openOrderCallModal() {
 }
 
 openOrderCallModal();
+
+function addSmoothScroll() {
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      const blockID = anchor.getAttribute('href')
+
+      document.querySelector(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      })
+    })
+  }
+}
+
+addSmoothScroll();

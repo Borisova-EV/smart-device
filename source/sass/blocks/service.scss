@@ -9,9 +9,7 @@
   }
 
   h2 {
-    margin-top: 0;
     margin-bottom: 50px;
-    font-weight: normal;
     font-size: 36px;
     line-height: 51px;
 
@@ -32,10 +30,8 @@
   }
 
   h3 {
-    margin-top: 0;
     margin-bottom: 0;
     width: 50%;
-    font-weight: normal;
     font-size: 20px;
     line-height: 30px;
 
@@ -76,19 +72,19 @@
       opacity: 0.2;
     }
   }
-}
 
-.service__list {
-  display: grid;
-  grid-template-columns: repeat(3, 32%);
-  column-gap: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    column-gap: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
 
-  @media (max-width: $tablet-max-width) {
-    display: block;
+    @media (max-width: $tablet-max-width) {
+      display: block;
+    }
   }
 }
 

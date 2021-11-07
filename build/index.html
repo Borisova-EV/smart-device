@@ -14,7 +14,7 @@
 <body class="page-body">
   <header class="page-header">
     <div class="page-header__link">
-      <a href="#" class="page-header__logo" aria-label="перейти на главную страницу Smart Device">
+      <a class="page-header__logo">
         <svg class="page-header__logo-image" width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite_auto.svg#brain-logo"></use>
         </svg>
@@ -46,51 +46,44 @@
       <h1>Печатные платы</h1>
       <div class="head__content">
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="head__link"><span class="head__link-desktop">Получить бесплатную консультацию</span><span class="head__link-mobile">Бесплатная консультация</span></a>
+        <a href="#form" class="head__link anchor-link"><span class="head__link-desktop">Получить бесплатную
+            консультацию</span><span class="head__link-mobile">Бесплатная консультация</span></a>
       </div>
     </section>
   </header>
   <main class="page-main">
     <section class="page-main__section-center features-block">
       <h2 class="visually-hidden">Наши преимущества</h2>
-      <ul class="features-block__list features">
-        <li class="features__item features__item--promptness">
-          <div class="features__svg-container">
-            <svg width="29" height="35" viewBox="0 0 29 35" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
-            </svg>
-          </div>
+      <ul>
+        <li class="features features--promptness">
+          <svg width="29" height="35" viewBox="0 0 29 35" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
+          </svg>
           <h3>Оперативные сроки </h3>
           <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять
             заказы плат и комплектующих в самые короткие сроки</p>
         </li>
-        <li class="features__item features__item--providers">
-          <div class="features__svg-container">
-            <svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#hired"></use>
-            </svg>
-          </div>
+        <li class="features features--providers">
+          <svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#hired"></use>
+          </svg>
           <h3>Крупные поставщики</h3>
           <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
             Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
           </p>
         </li>
-        <li class="features__item features__item--confidentiality">
-          <div class="features__svg-container">
-            <svg width="36" height="31" viewBox="0 0 36 31" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#detective"></use>
-            </svg>
-          </div>
+        <li class="features features--confidentiality">
+          <svg width="36" height="31" viewBox="0 0 36 31" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#detective"></use>
+          </svg>
           <h3>Полная конфиденциальность</h3>
           <p>По желанию клиента мы обеспечиваем полную конфеденциальность.
           </p>
         </li>
-        <li class="features__item features__item--personalization">
-          <div class="features__svg-container">
-            <svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#tag"></use>
-            </svg>
-          </div>
+        <li class="features features--personalization">
+          <svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#tag"></use>
+          </svg>
           <h3>Персонализация стоимости</h3>
           <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
             устраивает.</p>
@@ -105,12 +98,12 @@
         HOLGLITRONIC, REFOND. Печатные
         платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома
         (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-      <a hre="#" class="about__link button button--blue">Подробнее</a>
+      <a href="#" class="about__link button button--blue">Подробнее</a>
     </section>
     <section class="page-main__section-full page-main__section-full--service service">
       <div class="page-main__section-center">
         <h2>Service Device предлагает следующие товары и услуги</h2>
-        <ul class="service__list">
+        <ul>
           <li class="service__item service__item--production">
             <a href="#" aria-label="Перейти на страницу Производство печатных плат">
               <h3>Производство печатных плат</h3>
@@ -134,27 +127,28 @@
         <div class="form-block__container">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <form action="https://echo.htmlacademy.ru" method="post" class="form">
+          <form action="https://echo.htmlacademy.ru" method="post" class="form" id="form">
             <label class="visually-hidden" for="name">Введите ваше имя</label>
             <input type="text" name="name" id="name" required="" placeholder="Имя">
             <label class="visually-hidden" for="telephone">Введите ваш номер</label>
             <input type="tel" name="telephone" id="telephone" required="" maxlength="14" placeholder="Телефон">
             <label class="visually-hidden" for="question">Введите ваш вопрос</label>
-            <textarea name="question" placeholder="Ваш вопрос"></textarea>
+            <textarea name="question" placeholder="Ваш вопрос" id="question"></textarea>
             <button type="submit" class="button button--opacity-white form__button">Задать вопрос</button>
             <div class="form__checkbox-block">
-              <input type="checkbox" name="agree" required="">
+              <input type="checkbox" name="agree" id="agree" required="">
               <label for="agree">Я согласен на обработку персональных данных</label>
             </div>
           </form>
         </div>
-    </div></section>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__top-container">
       <div class="page-footer__container">
         <div class="page-footer__link-container">
-          <a class="page-footer__logo" aria-label="логотип компании Smart Device">
+          <a class="page-footer__logo">
             <svg class="page-footer__logo-image" width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite_auto.svg#brain-logo"></use>
             </svg>
@@ -224,26 +218,26 @@
       <a class="page-footer__developer" href="#">Developed by wow studio </a>
     </div>
   </footer>
-    <template id="order-call">
-      <section class="modal">
-        <h2>Закажите звонок</h2>
-        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form action="https://echo.htmlacademy.ru" method="post" class="form form--modal">
-          <label class="visually-hidden" for="name">Введите ваше имя</label>
-          <input type="text" name="name" id="name" required="" placeholder="Имя">
-          <label class="visually-hidden" for="telephone">Введите ваш номер</label>
-          <input type="tel" name="telephone" id="telephone" required="" maxlength="14" placeholder="Телефон">
-          <label class="visually-hidden" for="question">Введите ваш вопрос</label>
-          <textarea name="question" placeholder="Ваш вопрос"></textarea>
-          <button type="submit" class="button button--opacity-white form__button">Отправить</button>
-          <div class="form__checkbox-block form__checkbox-block--modal">
-            <input type="checkbox" name="agree" required="">
-            <label for="agree">Я согласен на обработку персональных данных</label>
-          </div>
-        </form>
-        <button type="button" class="modal__button" aria-label="Закрыть окно"></button>
-      </section>
-    </template>
+  <template id="order-call">
+    <section class="modal">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form action="https://echo.htmlacademy.ru" method="post" class="form form--modal">
+        <label class="visually-hidden" for="name-order-call">Введите ваше имя</label>
+        <input type="text" name="name" id="name-order-call" required="" placeholder="Имя">
+        <label class="visually-hidden" for="telephone-order-call">Введите ваш номер</label>
+        <input type="tel" name="telephone" id="telephone-order-call" required="" maxlength="14" placeholder="Телефон">
+        <label class="visually-hidden" for="question">Введите ваш вопрос</label>
+        <textarea name="question" placeholder="Ваш вопрос" id="question-order-call"></textarea>
+        <button type="submit" class="button button--opacity-white form__button">Отправить</button>
+        <div class="form__checkbox-block form__checkbox-block--modal">
+          <input type="checkbox" name="agree" id="agree-order-call" required="">
+          <label for="agree-order-call">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+      <button type="button" class="modal__button" aria-label="Закрыть окно"></button>
+    </section>
+  </template>
   <script src="js/main.js"></script>
 </body>
 

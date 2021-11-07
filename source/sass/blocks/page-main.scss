@@ -5,6 +5,17 @@
   @media (max-width: $tablet-max-width) {
     padding-top: 0;
   }
+
+  h2, h3 {
+    margin-top: 0;
+    @include roboto-font;
+    font-weight: normal;
+  }
+
+  p {
+    margin-top: 0;
+    @include mono-font;
+  }
 }
 
 .page-main__section-center {
@@ -20,9 +31,9 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     padding-left: 14px;
-    padding-right: 14px;
+    padding-right: 18px;
   }
 
   &--about {
@@ -36,8 +47,8 @@
 
     @media (max-width: $mobile-max-width) {
       margin-bottom: 62px;
-      padding-left: 14px;
-      padding-right: 14px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
@@ -65,7 +76,7 @@
     }
 
     @media (max-width: $mobile-max-width) {
-      padding-bottom: 6px;
+      padding-bottom: 10px;
     }
   }
 }

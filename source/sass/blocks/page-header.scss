@@ -81,6 +81,7 @@
 
   @media (max-width: $tablet-max-width) {
     margin-right: 0;
+    padding-bottom: 5px;
   }
 }
 
@@ -104,8 +105,8 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 15px;
+    padding-right: 13px;
     padding-bottom: 70px;
   }
 }
