@@ -1,5 +1,6 @@
 .service {
   min-height: 942px;
+
   @include roboto-font;
   color: $white;
   background-color: $dark;
@@ -134,8 +135,7 @@
   }
 
   &--assembly {
-    background-image: url("../img/service/assembly.png"),
-    linear-gradient($dark);
+    background-image: url("../img/service/assembly.png"), linear-gradient($dark);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/service/assembly@2x.png"), linear-gradient($dark);
@@ -159,8 +159,7 @@
   }
 
   &--component {
-    background-image: url("../img/service/components.png"),
-    linear-gradient($dark);
+    background-image: url("../img/service/components.png"), linear-gradient($dark);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/service/components@2x.png"), linear-gradient($dark);

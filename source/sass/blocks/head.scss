@@ -20,22 +20,19 @@
     background-size: 98%, 96%;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/head/circuit-boards@2x.png"),
-      url("../img/triangles/double-ellipse-white.png");
+      background-image: url("../img/head/circuit-boards@2x.png"), url("../img/triangles/double-ellipse-white.png");
     }
 
     @media (max-width: $tablet-max-width) {
       top: 8%;
       right: -13%;
       width: 60.5%;
-      background-image: url("../img/head/circuit-boards-tablet.png"),
-      url("../img/triangles/double-ellipse-white-tablet.png");
+      background-image: url("../img/head/circuit-boards-tablet.png"), url("../img/triangles/double-ellipse-white-tablet.png");
       background-position: center, 133% 89%;
       background-size: 57%, 165% 563px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/head/circuit-boards-tablet@2x.png"),
-        url("../img/triangles/double-ellipse-white-tablet.png");
+        background-image: url("../img/head/circuit-boards-tablet@2x.png"), url("../img/triangles/double-ellipse-white-tablet.png");
       }
     }
 
@@ -43,14 +40,12 @@
       top: 8%;
       right: 0;
       width: 304px;
-      background-image: url("../img/head/circuit-boards-mobile.png"),
-      url("../img/triangles/double-ellipse-white-mobile.png");
+      background-image: url("../img/head/circuit-boards-mobile.png"), url("../img/triangles/double-ellipse-white-mobile.png");
       background-position: 0 14%, 0 -49px;
       background-size: 100%, 304px 529px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/head/circuit-boards-mobile@2x.png"),
-        url("../img/triangles/double-ellipse-white-mobile.png");
+        background-image: url("../img/head/circuit-boards-mobile@2x.png"), url("../img/triangles/double-ellipse-white-mobile.png");
       }
     }
   }
@@ -59,6 +54,7 @@
     margin-top: 0;
     margin-bottom: 29px;
     width: 51%;
+
     @include roboto-font;
     font-weight: bold;
     font-size: 80px;
@@ -69,7 +65,7 @@
     @media (max-width: $tablet-max-width) {
       margin-bottom: 25px;
       font-size: 60px;
-      line-height: 70px
+      line-height: 70px;
     }
 
     @media (max-width: $mobile-max-width) {
@@ -78,7 +74,7 @@
       width: 100%;
       font-size: 40px;
       line-height: 47px;
-      z-index: 10;
+      z-index: 5;
     }
   }
 
@@ -86,6 +82,7 @@
     margin-top: 0;
     margin-bottom: 43px;
     width: 50%;
+
     @include mono-font;
     font-size: 22px;
     line-height: 34px;
@@ -139,6 +136,7 @@
   padding-top: 17px;
   width: 407px;
   height: 55px;
+
   @include roboto-font;
   font-weight: bold;
   font-size: 16px;

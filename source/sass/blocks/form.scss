@@ -13,9 +13,11 @@
     display: block;
   }
 
-  input, textarea {
+  input,
+  textarea {
     padding: 14px 16px;
     width: 100%;
+
     @include mono-font;
     font-size: 16px;
     line-height: 22px;
@@ -83,7 +85,8 @@
     flex-direction: column;
     row-gap: 0;
 
-    input, textarea {
+    input,
+    textarea {
       padding: 11px 27px;
     }
 
@@ -121,6 +124,7 @@
   display: flex;
   padding-top: 12px;
   padding-left: 8px;
+
   @include mono-font;
   font-size: 14px;
   line-height: 16px;
@@ -141,8 +145,15 @@
     height: 16px;
     border: 1px solid $white;
 
+    @media (max-width: $tablet-max-width) {
+      padding-left: 0;
+      padding-right: 0;
+      height: 16px;
+    }
+
     @media (max-width: $mobile-max-width) {
-      max-width: 16px;
+      margin-bottom: 0;
+      width: 16px;
     }
 
     &:focus {

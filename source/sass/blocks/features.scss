@@ -68,9 +68,10 @@
     @media (max-width: $tablet-max-width) {
       margin-bottom: 5px;
     }
+
     @media (max-width: $mobile-max-width) {
       margin-bottom: 10px;
-   }
+    }
   }
 
   &--providers {
@@ -109,7 +110,6 @@
         margin-bottom: 13px;
       }
     }
-
   }
 
   &--personalization {
@@ -133,8 +133,9 @@
   &:hover {
     background-color: $blue;
 
-    h3, p {
-    color: $white;
+    h3,
+    p {
+      color: $white;
     }
 
     svg {

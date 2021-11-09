@@ -1,6 +1,6 @@
 //colours
 $white: #ffffff;
-$white-rgb: rgb(255,255,255);
+$white-rgb: rgb(255, 255, 255);
 $blue: #00b2ff;
 $dark: #1b2d37;
 $grey: #666666;
@@ -8,7 +8,7 @@ $light-grey: #999999;
 $special-grey: #cdcdcd;
 $border-grey: rgb(98, 105, 98);
 $border-light-grey: #ebebeb;
-$black-rgb: rgb(0,0,0);
+$black-rgb: rgb(0, 0, 0);
 
 // Viewport
 $tablet-max-width: 1023px;
@@ -20,11 +20,11 @@ $min-desktop-width: 1100px;
 
 @mixin mono-font {
   font-family: "PT Mono", "Nimbus Mono L", "Courier New", monospace;
-};
+}
 
 @mixin roboto-font {
-  font-family: "Roboto Condensed","Nimbus Sans L", "Helvetica", "Arial", sans-serif;
-};
+  font-family: "Roboto Condensed", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+}
 
 @mixin single-grey-triangles {
   content: "";

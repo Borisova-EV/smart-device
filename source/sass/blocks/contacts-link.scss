@@ -12,6 +12,7 @@
 
 .contacts-link__item {
   min-width: max-content;
+
   @include mono-font;
   font-size: 16px;
   line-height: 18px;
@@ -39,16 +40,14 @@
     }
 
     &:visited {
-      color:inherit;
+      color: inherit;
     }
 
     &:hover {
       color: $blue;
-
-      svg {
-        stroke: $white;
-      }
+      stroke: $white;
     }
+
     &:active {
       opacity: 0.5;
     }
@@ -84,7 +83,6 @@
         margin-right: 0;
         width: 24px;
         height: 24px;
-
       }
     }
   }

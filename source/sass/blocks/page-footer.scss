@@ -5,6 +5,7 @@
   h2 {
     margin-top: 0;
     margin-bottom: 26px;
+
     @include roboto-font;
     font-size: 15px;
     line-height: 16px;
@@ -12,23 +13,21 @@
     text-transform: uppercase;
   }
 
-  a {
-    &:not(.page-footer__logo) {
+  a:not(.page-footer__logo) {
+    color: inherit;
+    opacity: 0.5;
+
+    &:visited {
       color: inherit;
-      opacity: 0.5;
+    }
 
-      &:visited {
-        color:inherit
-      }
+    &:hover {
+      color: $blue;
+    }
 
-      &:hover {
-        color: $blue;
-      }
-
-      &:active {
-        color: inherit;
-        opacity: 1;
-      }
+    &:active {
+      color: inherit;
+      opacity: 1;
     }
   }
 }
@@ -266,6 +265,7 @@
 
 .page-footer__accordion-button {
   display: none;
+
   @media (max-width: $mobile-max-width) {
     position: absolute;
     top: 28px;

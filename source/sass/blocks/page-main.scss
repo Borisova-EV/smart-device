@@ -6,14 +6,17 @@
     padding-top: 0;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     margin-top: 0;
+
     @include roboto-font;
     font-weight: normal;
   }
 
   p {
     margin-top: 0;
+
     @include mono-font;
   }
 }
