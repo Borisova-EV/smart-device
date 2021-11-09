@@ -109,9 +109,7 @@
 
   function isRequiredInputEmpty(form) {
     const inputRequired = form.querySelectorAll('input[required]');
-    inputRequired.forEach(function (input) {
-      return input === 0;
-    })
+     return Array.from(inputRequired).some((elem) => elem.value == 0)
   }
 
   function submitForm(form) {
@@ -122,6 +120,7 @@
 
       if (isRequiredInputEmpty(this)) {
         evt.preventDefault();
+        inputName.style.border= '2px solid red';
       } else if (isStorageSupport) {
         localStorage.setItem('name', inputName.value);
         localStorage.setItem('telephone', inputTelephone.value);
@@ -129,7 +128,7 @@
       }
     })
   }
-
+  console.log(isRequiredInputEmpty(form));
   submitForm(form);
 
   function createTelephoneMask(telephone) {
