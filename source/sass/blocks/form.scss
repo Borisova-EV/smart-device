@@ -69,6 +69,7 @@
   textarea {
     grid-column: 1/-1;
     height: 154px;
+    resize: none;
 
     @media (max-width: $tablet-max-width) {
       height: 162px;
@@ -144,6 +145,7 @@
     min-width: 16px;
     height: 16px;
     border: 1px solid $white;
+    cursor: pointer;
 
     @media (max-width: $tablet-max-width) {
       padding-left: 0;

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Device - производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
   <title>Smart Device</title>
   <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin>
@@ -15,14 +16,13 @@
   <header class="page-header">
     <div class="page-header__link">
       <a class="page-header__logo">
-        <svg class="page-header__logo-image" width="52" height="52" viewBox="0 0 52 52"
-          xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite_auto.svg#brain-logo"></use>
-        </svg>
-        <svg class="page-header__logo-title" width="134" height="45" viewBox="0 0 134 45"
-          xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite_auto.svg#title-smart-logo"></use>
-        </svg>
+        <picture>
+          <source media="(max-width:767px)" srcset="img/logo/logo-header-mobile.png 1x, img/logo/logo-header-mobile@2x.png 2x">
+          <source type="image/webp"  media="(max-width:767px)" srcset="img/logo/logo-header-mobile.webp 1x, img/logo/logo-header-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo/logo-header.webp 1x, img/logo/logo-header@2x.webp 2x">
+          <!-- 1х: 202px; 2x: 404px -->
+          <img width="202" height="52" srcset="img/logo/logo-header.png 1x, img/logo/logo-header@2x.png 2x" src="img/logo/logo-header.png" alt="логотип компании Smart Device">
+        </picture>
       </a>
       <ul class="page-header__contacts contacts-link">
         <li class="contacts-link__item contacts-link__item--mail">
@@ -125,7 +125,7 @@
       </div>
     </section>
     <section class="page-main__section-full form-block">
-      <div class="page-main__section-center page-main__section-center--flex">
+      <div class="page-main__section-center page-main__section-center--flex page-main__section-center--form">
         <div class="form-block__container">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
@@ -151,14 +151,11 @@
       <div class="page-footer__container">
         <div class="page-footer__link-container">
           <a class="page-footer__logo">
-            <svg class="page-footer__logo-image" width="52" height="52" viewBox="0 0 52 52"
-              xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#brain-logo"></use>
-            </svg>
-            <svg class="page-footer__logo-title" width="148" height="45" viewBox="0 0 148 45"
-              xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#title-service-logo"></use>
-            </svg>
+            <picture>
+              <source type="image/webp" srcset="img/logo/logo-footer.webp 1x, img/logo/logo-footer@2x.webp 2x">
+              <!-- 1х: 216px; 2x: 434px -->
+              <img width="216" height="52" srcset="img/logo/logo-footer.png 1x, img/logo/logo-footer@2x.png 2x" src="img/logo/logo-footer.png" alt="логотип компании Service Device">
+            </picture>
           </a>
           <p class="page-footer__copyright-top">
             1999-2018 SD Service Devices
@@ -189,8 +186,7 @@
         </div>
         <nav class="page-footer__navigation page-footer__accordion-section">
           <div class="page-footer__navigation-content">
-            <h2>Разделы сайта</h2>
-            <button type="button" class="page-footer__accordion-button" aria-label="Узнать подробнее"></button>
+            <h2 class="page-footer__accordion-title">Разделы сайта</h2>
             <ul class="page-footer__navigation-list page-footer__accordion-content navigation">
               <li class="navigation__item"><a href="#">О компании</a></li>
               <li class="navigation__item"><a href="#">Продукты</a></li>
@@ -203,8 +199,7 @@
           </div>
         </nav>
         <div class="page-footer__contacts page-footer__accordion-section contacts">
-          <h2>Наш офис</h2>
-          <button type="button" class="page-footer__accordion-button" aria-label="Узнать подробнее"></button>
+          <h2 class="page-footer__accordion-title">Наш офис</h2>
           <div class="page-footer__accordion-content">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <a href="tel:+74955894050" aria-label="Позвонить по номеру +74955894050">+7 (495) 589-40-50</a>
@@ -215,9 +210,8 @@
       </div>
     </div>
     <div class="page-footer__bottom-container">
-      <p><span class="page-footer__copyright">Все права защищены</span>
-        1999-2018 SD Service Devices
-      </p>
+      <p class="page-footer__copyright">Все права защищены</p>
+      <p>1999-2018 SD Service Devices</p>
       <a class="page-footer__privacy" href="#">Условия конфиденциальности</a>
       <a class="page-footer__developer" href="#">Developed by wow studio </a>
     </div>

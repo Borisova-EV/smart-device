@@ -43,7 +43,7 @@
     padding-left: 209px;
 
     @media (max-width: $tablet-max-width) {
-      margin-bottom: 84px;
+      margin-bottom: 83px;
       padding-left: 195px;
       padding-right: 0;
     }
@@ -63,6 +63,35 @@
   @media (max-width: $tablet-max-width) {
     justify-content: center;
   }
+
+  &--form {
+    position: relative;
+
+    @media (max-width: $tablet-max-width) {
+      padding-left: 32px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -170px;
+      bottom: -27px;
+      width: 677.75px;
+      height: 677.75px;
+      background-image: url("../img/others/airplane.png"), url("../img/triangles/double-ellipse-white.png");
+      background-repeat: no-repeat;
+      background-size: 74%, 100%;
+      background-position: 100% 65%, bottom;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/others/airplane@2x.png"), url("../img/triangles/double-ellipse-white.png");
+      }
+
+      @media (max-width: $tablet-max-width) {
+        display: none;
+      }
+    }
+  }
 }
 
 .page-main__section-full {
@@ -74,12 +103,12 @@
     padding-top: 93px;
 
     @media (max-width: $tablet-max-width) {
-      padding-top: 53px;
+      padding-top: 51px;
       padding-bottom: 25px;
     }
 
     @media (max-width: $mobile-max-width) {
-      padding-bottom: 10px;
+      padding-bottom: 12px;
     }
   }
 }

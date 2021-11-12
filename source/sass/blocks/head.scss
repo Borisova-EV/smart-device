@@ -10,17 +10,20 @@
   &::before {
     content: "";
     position: absolute;
-    top: -10%;
-    right: -2%;
-    width: 48%;
     height: 503px;
-    background-image: url("../img/head/circuit-boards.png"), url("../img/triangles/double-ellipse-white.png");
     background-repeat: no-repeat, no-repeat;
-    background-position: 163% 26%, bottom;
-    background-size: 98%, 96%;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/head/circuit-boards@2x.png"), url("../img/triangles/double-ellipse-white.png");
+    @media (min-width: $desktop-min-width) {
+      top: -10%;
+      right: -2%;
+      width: 48%;
+      background-image: url("../img/head/circuit-boards.png"), url("../img/triangles/double-ellipse-white.png");
+      background-position: 163% 26%, bottom;
+      background-size: 98%, 96%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/head/circuit-boards@2x.png"), url("../img/triangles/double-ellipse-white.png");
+      }
     }
 
     @media (max-width: $tablet-max-width) {
@@ -63,7 +66,7 @@
     text-transform: uppercase;
 
     @media (max-width: $tablet-max-width) {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
       font-size: 60px;
       line-height: 70px;
     }
@@ -88,7 +91,7 @@
     line-height: 34px;
 
     @media (max-width: $tablet-max-width) {
-      margin-bottom: 54px;
+      margin-bottom: 56px;
       width: 56%;
       font-size: 18px;
       line-height: 28px;

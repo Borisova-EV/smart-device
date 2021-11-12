@@ -1,9 +1,9 @@
 (function () {
-  const accordionButtons = document.querySelectorAll('.page-footer__accordion-button');
+  const accordionTitles = document.querySelectorAll('.page-footer__accordion-title');
   const accordionContents = document.querySelectorAll('.page-footer__accordion-content');
 
   const ACCORDION_HIDDEN_CLASS = 'page-footer__accordion-content--hidden';
-  const ACCORDION_CURRENT_BUTTON_CLASS = 'page-footer__accordion-button--current';
+  const ACCORDION_CURRENT_TITLE_CLASS = 'page-footer__accordion-title--current';
 
   function closeAccordionContent() {
     accordionContents.forEach(function (elem) {
@@ -11,21 +11,20 @@
     })
   }
 
-  function changeButtonAccordion(currentButton) {
-    accordionButtons.forEach(function (button) {
-      if (button !== currentButton) {
-        button.classList.remove(ACCORDION_CURRENT_BUTTON_CLASS);
+  function changeAccordionTitle(currentTitle) {
+    accordionTitles.forEach(function (title) {
+      if (title !== currentTitle) {
+        title.classList.remove(ACCORDION_CURRENT_TITLE_CLASS);
       }
     })
   }
 
   function openAccordionMenu() {
     closeAccordionContent();
-    accordionButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        changeButtonAccordion(this);
-        this.classList.toggle(ACCORDION_CURRENT_BUTTON_CLASS);
-
+    accordionTitles.forEach(function (title) {
+      title.addEventListener('click', function () {
+        changeAccordionTitle(this);
+        this.classList.toggle(ACCORDION_CURRENT_TITLE_CLASS);
         const content = this.nextElementSibling;
         accordionContents.forEach(function (elem) {
           if (elem === content) {
@@ -81,6 +80,9 @@
   const orderCallModal = orderCallTemplate.cloneNode(true);
   const closeOrderCallModalButton = orderCallModal.querySelector('.modal__button');
   const inputNameModal = orderCallModal.querySelector('input#name-order-call');
+  const focusableElements = orderCallModal.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
   let isStorageSupport = true;
   let storageName = '';
@@ -109,7 +111,7 @@
 
   function isRequiredInputEmpty(form) {
     const inputRequired = form.querySelectorAll('input[required]');
-      return Array.from(inputRequired).some((elem) => elem.value == 0)
+    return Array.from(inputRequired).some((elem) => elem.value == 0)
   }
 
   function submitForm(form) {
@@ -118,7 +120,7 @@
       const inputTelephone = this.querySelector('input[type=tel]');
       const inputMessage = this.querySelector('textarea');
 
-      if (isRequiredInputEmpty(this)) {
+      if (isRequiredInputEmpty(this) || inputTelephone.value == FIRST_SYMBOL) {
         evt.preventDefault();
       } else if (isStorageSupport) {
         localStorage.setItem('name', inputName.value);
@@ -178,6 +180,25 @@
     closeOrderCallModal();
   }
 
+  function trapFocus() {
+    orderCallModal.addEventListener('keydown', function (evt) {
+      console.log(document.activeElement);
+      if (evt.key === 'Tab') {
+        if (evt.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+            lastFocusableElement.focus();
+            evt.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            evt.preventDefault();
+          }
+        }
+      }
+    })
+  }
+
   function openOrderCallModal() {
     orderCallButton.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -188,6 +209,8 @@
       const telephoneOrderCall = formOrderCall.querySelector('input[type=tel]');
       createTelephoneMask(telephoneOrderCall);
       submitForm(formOrderCall);
+
+      trapFocus();
 
       page.classList.add('page-body--opened-modal');
       document.addEventListener('keydown', onDocumentKeydown);

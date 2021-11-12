@@ -1,19 +1,12 @@
 .navigation {
-  display: grid;
-  grid-template-rows: repeat(4, min-content);
-  grid-auto-columns: max-content;
-  grid-auto-flow: column;
+  column-count: 2;
   font-size: 15px;
   line-height: 25px;
   list-style: none;
-  column-gap: 16%;
-
-  @media (max-width: $min-desktop-width) {
-    column-gap: 5%;
-  }
+  column-gap: 31%;
 
   @media (max-width: $tablet-max-width) {
-    display: block;
+    column-count: 1;
   }
 
   a {

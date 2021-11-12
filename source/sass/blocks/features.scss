@@ -4,10 +4,9 @@
   background-color: $white;
   border: 1px solid $border-light-grey;
   border-left: 3px solid $blue;
-  cursor: pointer;
 
   @media (max-width: $tablet-max-width) {
-    padding: 24px 22px 19px 21px;
+    padding: 24px 20px 19px 23px;
     min-height: 232px;
   }
 
@@ -103,11 +102,19 @@
       @media (max-width: $tablet-max-width) {
         margin-bottom: 5px;
       }
+
+      @media (max-width: $mobile-max-width) {
+        margin-bottom: 4px;
+      }
     }
 
     h3 {
       @media (max-width: $tablet-max-width) {
         margin-bottom: 13px;
+      }
+
+      @media (max-width: $mobile-max-width) {
+        margin-bottom: 15px;
       }
     }
   }
@@ -118,6 +125,10 @@
     }
 
     svg {
+      @media (max-width: $tablet-max-width) {
+        margin-bottom: 3px;
+      }
+
       @media (max-width: $mobile-max-width) {
         margin-bottom: 8px;
       }

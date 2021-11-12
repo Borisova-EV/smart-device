@@ -36,7 +36,7 @@
     color: inherit;
 
     svg {
-      stroke: $blue;
+      fill: $blue;
     }
 
     &:visited {
@@ -45,7 +45,7 @@
 
     &:hover {
       color: $blue;
-      stroke: $white;
+      fill: $white;
     }
 
     &:active {
