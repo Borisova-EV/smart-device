@@ -195,8 +195,8 @@
 
 .page-footer__bottom-container {
   display: grid;
-  grid-template-columns: max-content max-content 1fr max-content;
-  column-gap: 5%;
+  grid-template-columns: 156px 233px 20.5% 1fr;
+  column-gap: 4.8%;
   padding-left: 30px;
   padding-right: 30px;
   margin: 0 auto;
@@ -205,10 +205,6 @@
   line-height: 24px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
-  @media (max-width: $min-desktop-width) {
-    column-gap: 5%;
-  }
 
   @media (max-width: $tablet-max-width) {
     display: flex;
@@ -231,7 +227,6 @@
   p {
     margin-top: 0;
     margin-bottom: 0;
-    min-width: max-content;
     opacity: 0.5;
 
     @media (max-width: $tablet-max-width) {
@@ -247,9 +242,7 @@
 }
 
 .page-footer__privacy {
-  width: max-content;
-  padding-left: 12%;
-
+  justify-self: flex-end;
 
   @media (max-width: $tablet-max-width) {
     padding-left: 0;
@@ -262,7 +255,7 @@
 }
 
 .page-footer__developer {
-  min-width: max-content;
+  margin-left: auto;
 
   @media (max-width: $mobile-max-width) {
     width: 100%;

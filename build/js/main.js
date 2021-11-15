@@ -92,6 +92,7 @@
   const FIRST_SYMBOL = '+7(';
   const SYMBOL_MASK = ')';
   const POSITION_SYMBOL_MASK = 7;
+  const TELEPHONE_NUMBER_LENGTH = 14;
 
   try {
     storageName = localStorage.getItem('name');
@@ -120,7 +121,7 @@
       const inputTelephone = this.querySelector('input[type=tel]');
       const inputMessage = this.querySelector('textarea');
 
-      if (isRequiredInputEmpty(this) || inputTelephone.value == FIRST_SYMBOL) {
+      if (isRequiredInputEmpty(this) || inputTelephone.value.length !== TELEPHONE_NUMBER_LENGTH) {
         evt.preventDefault();
       } else if (isStorageSupport) {
         localStorage.setItem('name', inputName.value);

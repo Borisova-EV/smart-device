@@ -129,6 +129,11 @@
   @include mono-font;
   font-size: 14px;
   line-height: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($white-rgb, 0.5);
+  }
 
   @media (max-width: $mobile-max-width) {
     padding: 0;
@@ -157,10 +162,6 @@
       margin-bottom: 0;
       width: 16px;
     }
-
-    &:focus {
-      outline: 1px solid $white;
-    }
   }
 
   input:checked + label {
@@ -175,6 +176,20 @@
       height: 6px;
       background-image: url("../img/icon/checkbox.svg");
       background-repeat: no-repeat;
+    }
+  }
+
+  input:focus + label {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -35px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $white;
     }
   }
 

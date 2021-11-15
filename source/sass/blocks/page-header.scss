@@ -24,6 +24,7 @@
 
 .page-header__logo {
   margin-right: 30px;
+  flex-shrink: 0;
 
   img {
     width: 202px;
@@ -60,7 +61,7 @@
 }
 
 .page-header__contacts {
-  margin-top: 0;
+  margin: 0;
   margin-right: 50px;
   margin-bottom: 0;
   padding-left: 0;
