@@ -164,6 +164,10 @@
     }
   }
 
+  input + label {
+    cursor: pointer;
+  }
+
   input:checked + label {
     position: relative;
 
