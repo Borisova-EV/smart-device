@@ -40,7 +40,6 @@
 .page-header__link {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 0 auto 225px;
   padding-left: 30px;
   padding-right: 30px;
@@ -61,19 +60,22 @@
 }
 
 .page-header__contacts {
-  margin: 0;
-  margin-right: 50px;
-  margin-bottom: 0;
+  margin: 0 50px 0 0;
   padding-left: 0;
+  padding-top: 18px;
   margin-left: auto;
 
   @media (max-width: $tablet-max-width) {
     margin-right: 0;
     padding-bottom: 5px;
+    padding-top: 0;
   }
 }
 
 .page-header__order-call {
+  margin-top: 5px;
+  height: 45px;
+
   @media (max-width: $tablet-max-width) {
     display: none;
   }

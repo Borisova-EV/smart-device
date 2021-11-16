@@ -5,6 +5,10 @@
   list-style: none;
   column-gap: 31%;
 
+  @media (max-width: $min-desktop-width) {
+    column-gap: 5%;
+  }
+
   @media (max-width: $tablet-max-width) {
     column-count: 1;
   }

@@ -129,7 +129,7 @@
         <div class="form-block__container">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <form action="https://echo.htmlacademy.ru" method="post" class="form" id="form">
+          <form action="https://echo.htmlacademy.ru" method="post" class="form form-block__form" id="form">
             <label class="visually-hidden" for="name">Введите ваше имя</label>
             <input type="text" name="name" id="name" required="" placeholder="Имя">
             <label class="visually-hidden" for="telephone">Введите ваш номер</label>
@@ -138,10 +138,11 @@
             <textarea name="question" placeholder="Ваш вопрос" id="question"></textarea>
             <button type="submit" class="button button--opacity-white form__button">Задать вопрос</button>
             <div class="form__checkbox-block">
-              <input type="checkbox" name="agree" id="agree" required="">
-              <label for="agree">Я согласен на обработку персональных данных</label>
-            </div>
-          </form>
+              <label for="agree">
+                <input type="checkbox" name="agree" id="agree" required="">
+                <span>Я согласен на обработку персональных данных</span>
+              </label>
+          </div></form>
         </div>
       </div>
     </section>
@@ -229,8 +230,10 @@
         <textarea name="question" placeholder="Ваш вопрос" id="question-order-call"></textarea>
         <button type="submit" class="button button--opacity-white form__button">Отправить</button>
         <div class="form__checkbox-block form__checkbox-block--modal">
-          <input type="checkbox" name="agree" id="agree-order-call" required="">
-          <label for="agree-order-call">Я согласен на обработку персональных данных</label>
+          <label for="agree-order-call">
+            <input type="checkbox" name="agree" id="agree-order-call" required="">
+            <span>Я согласен на обработку персональных данных</span>
+          </label>
         </div>
       </form>
       <button type="button" class="modal__button" aria-label="Закрыть окно"></button>

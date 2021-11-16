@@ -1,29 +1,35 @@
 .contacts-link {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
   flex-wrap: wrap;
   row-gap: 5px;
-  column-gap: 88px;
   list-style: none;
 
   @media (max-width: $tablet-max-width) {
     align-items: center;
-    column-gap: 33px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    column-gap: 23px;
   }
 }
 
 .contacts-link__item {
   min-width: max-content;
+  margin-right: 88px;
 
   @include mono-font;
   font-size: 16px;
   line-height: 18px;
   color: $white;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 34px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 23px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   a {
     display: flex;

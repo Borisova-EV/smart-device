@@ -6,7 +6,7 @@
   background-color: $blue;
 
   @media (max-width: $tablet-max-width) {
-    padding-top: 81px;
+    padding-top: 79px;
     min-height: 664px;
   }
 
@@ -56,7 +56,7 @@
 
   @media (max-width: $tablet-max-width) {
     padding-left: 0;
-    width: 83%;
+    width: 84%;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -83,5 +83,17 @@
     @media (max-width: $tablet-max-width) {
       display: none;
     }
+  }
+}
+
+.form-block__form {
+  @media (max-width: $tablet-max-width) {
+    padding-left: 5px;
+    padding-right: 7px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

@@ -22,7 +22,7 @@
     }
 
     @media (max-width: $mobile-max-width) {
-      margin-bottom: 37px;
+      margin-bottom: 42px;
       padding-left: 12px;
       width: 100%;
       font-size: 28px;
@@ -57,8 +57,12 @@
     }
 
     @media (max-width: $mobile-max-width) {
-      padding-top: 23px;
+      padding-top: 21px;
       padding-left: 37px;
+    }
+
+    &:link {
+      color: inherit;
     }
 
     &:visited {
